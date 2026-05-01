@@ -20,32 +20,46 @@
     <!-- // NAVIGATION PART -->
     <nav>
         <div class="logo-text">SHARIFF ISIRANI (H)</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#work">Work</a>
-            <a href="mailto:2004shariffisirani@gmail.com">Email</a>
-            <a href="ISIRANI_SHARIFF_RESUME.pdf" target="_blank" class="resume-link">Resume</a>
+        
+        <div class="nav-right">
+            <div class="nav-links desktop-nav">
+                <a href="#about">About</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#work">Work</a>
+                <a href="mailto:2004shariffisirani@gmail.com">Email</a>
+                <a href="ISIRANI_SHARIFF_RESUME.pdf" target="_blank" class="resume-link">Resume</a>
+            </div>
+            <img src="ic_menu.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
         </div>
     </nav>
 
+    <!-- // MOBILE MENU DROPDOWN -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#expertise" onclick="toggleMenu()">Expertise</a>
+        <a href="#work" onclick="toggleMenu()">Work</a>
+        <a href="mailto:2004shariffisirani@gmail.com" onclick="toggleMenu()">Email</a>
+        <a href="ISIRANI_SHARIFF_RESUME.pdf" target="_blank" class="resume-link-mobile">Resume</a>
+    </div>
+
     <!-- // HEADER PART -->
     <header class="hero">
-        <!-- Bottom Layer: Video -->
         <video autoplay muted loop playsinline class="hero-video">
             <source src="videobg.mp4" type="video/mp4">
         </video>
         
-        <!-- Intermediate Layer: hero.png -->
         <img src="hero.png" alt="" class="hero-hero">
-
-        <!-- Top Layer: CodeLink Overlay -->
         <img src="CodeLink.png" alt="" class="hero-codelink">
-        
         <div class="hero-shade"></div>
+
         <div class="hero-content">
-            <h1>SHARIFF ISIRANI</h1>
-            <h2 class="montserrat">UI/UX DESIGNER & TECHNICAL ARTIST</h2>
+            <h2 class="hero-subtitle montserrat">UI/UX DESIGNER & TECHNICAL ARTIST</h2>
+            
+            <h1 class="interactive-name">
+                SHARIFF <span class="mobile-break"></span>ISIRANI
+            </h1>
+            
+            <p class="brand-tag montserrat">( H I S H I R U S A I )</p> 
             <p class="slogan montserrat">"Building Systems, Designing Worlds."</p>
         </div>
     </header>
@@ -154,6 +168,11 @@
             document.getElementById('lightbox-img').src = src;
             document.getElementById('lightbox-bg').src = src;
             document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
         }
     </script>
 </body>
