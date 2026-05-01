@@ -6,23 +6,20 @@
     <title>SHARIFF ISIRANI | Portfolio</title>
     <link rel="icon" type="image/png" href="HISHI.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- LIGHTBOX: FULL IMAGE + BLURRED BACKDROP -->
+    <!-- // LIGHTBOX PART -->
     <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
-        <!-- Blurred Background -->
         <img id="lightbox-bg" class="lightbox-blur-bg" src="" alt="">
-        <!-- Full Image (No Cropping) -->
         <div class="lightbox-frame">
             <img id="lightbox-img" src="" alt="Large View">
         </div>
     </div>
 
+    <!-- // NAVIGATION PART -->
     <nav>
-        <div class="logo">SHARIFF ISIRANI (H)</div>
+        <div class="logo-text">SHARIFF ISIRANI (H)</div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#expertise">Expertise</a>
@@ -32,6 +29,7 @@
         </div>
     </nav>
 
+    <!-- // HEADER PART -->
     <header class="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="videobg.mp4" type="video/mp4">
@@ -40,21 +38,22 @@
         <div class="hero-shade"></div>
         <div class="hero-content">
             <h1>SHARIFF ISIRANI</h1>
-            <h2>UI/UX DESIGNER & TECHNICAL ARTIST</h2>
-            <p class="slogan">"Building Systems, Designing Worlds."</p>
+            <h2 class="montserrat">UI/UX DESIGNER & TECHNICAL ARTIST</h2>
+            <p class="slogan montserrat">"Building Systems, Designing Worlds."</p>
         </div>
     </header>
 
+    <!-- // ABOUT ME PART -->
     <section id="about" class="container">
         <div class="about-grid">
             <div class="about-text">
                 <h3 class="section-label">ABOUT ME</h3>
                 <h2 class="massive-title">SHARIFF ISIRANI</h2>
-                <p class="about-roles">Front-End Developer | UI/UX | Designer | Graphic Designer | Illustrator | Visuals</p>
-                <p class="big-bio">
+                <p class="about-roles montserrat">Front-End Developer | UI/UX | Designer | Graphic Designer | Illustrator | Visuals</p>
+                <p class="big-bio montserrat">
                     I am a BSIT student and Centennial Scholar focused on bridging the gap between complex system logic and intuitive user experiences. My approach combines technical rigor with the aesthetic precision of a digital artist.
                 </p>
-                <a href="https://hishirusai.github.io/" target="_blank" class="btn-primary">Founder of Hishirusai</a>
+                <a href="https://hishirusai.github.io/" target="_blank" class="btn-primary montserrat">Founder of Hishirusai</a>
             </div>
             <div class="about-image">
                 <img src="coding-pov.png" alt="Coding POV">
@@ -62,6 +61,7 @@
         </div>
     </section>
 
+    <!-- // EXPERTISE PART -->
     <section id="expertise">
         <div class="expertise-header">
             <div class="expertise-overlay"></div>
@@ -69,44 +69,46 @@
         </div>
         <div class="container">
             <div class="expertise-grid">
-                <div class="cute-box"><img src="visualstudiocode.svg" alt=""><h4>VS Code</h4><p>Code Editor</p></div>
-                <div class="cute-box"><img src="Figma.svg" alt=""><h4>Figma</h4><p>Interface Design</p></div>
-                <div class="cute-box"><img src="Penpot.png" alt=""><h4>Penpot</h4><p>Open Source UI</p></div>
-                <div class="cute-box"><img src="IbisPaint.svg" alt=""><h4>Ibis Paint</h4><p>Digital Art</p></div>
-                <div class="cute-box"><img src="new-affinity-logo.svg" alt=""><h4>Affinity</h4><p>Vector Art</p></div>
-                <div class="cute-box"><img src="Canva.svg" alt=""><h4>Canva</h4><p>Layouts</p></div>
-                <div class="cute-box"><img src="react.svg" alt=""><h4>React</h4><p>Frontend</p></div>
-                <div class="cute-box"><img src="tailwindcss.svg" alt=""><h4>Tailwind</h4><p>Styling</p></div>
-                <div class="cute-box"><img src="vitejs.svg" alt=""><h4>Vite</h4><p>Build Tools</p></div>
-                <div class="cute-box"><img src="github.svg" alt=""><h4>GitHub</h4><p>Version</p></div>
-                <div class="cute-box"><img src="Framer.jpg" alt=""><h4>Framer</h4><p>Prototyping</p></div>
-                <div class="cute-box"><img src="Blender.svg" alt=""><h4>Blender</h4><p>3D Modeling</p></div>
+                <div class="cute-box"><img src="logo/visualstudiocode.svg" alt=""><h4>VS Code</h4><p class="montserrat">Code Editor</p></div>
+                <div class="cute-box"><img src="logo/Figma.svg" alt=""><h4>Figma</h4><p class="montserrat">Interface Design</p></div>
+                <div class="cute-box"><img src="logo/Penpot.png" alt=""><h4>Penpot</h4><p class="montserrat">Open Source UI</p></div>
+                <div class="cute-box"><img src="logo/IbisPaint.svg" alt=""><h4>Ibis Paint</h4><p class="montserrat">Digital Art</p></div>
+                <div class="cute-box"><img src="logo/new-affinity-logo.svg" alt=""><h4>Affinity</h4><p class="montserrat">Vector Art</p></div>
+                <div class="cute-box"><img src="logo/Canva.svg" alt=""><h4>Canva</h4><p class="montserrat">Layouts</p></div>
+                <div class="cute-box"><img src="logo/react.svg" alt=""><h4>React</h4><p class="montserrat">Frontend</p></div>
+                <div class="cute-box"><img src="logo/tailwindcss.svg" alt=""><h4>Tailwind</h4><p class="montserrat">Styling</p></div>
+                <div class="cute-box"><img src="logo/vitejs.svg" alt=""><h4>Vite</h4><p class="montserrat">Build Tools</p></div>
+                <div class="cute-box"><img src="logo/github.svg" alt=""><h4>GitHub</h4><p class="montserrat">Version</p></div>
+                <div class="cute-box"><img src="logo/Framer.jpg" alt=""><h4>Framer</h4><p class="montserrat">Prototyping</p></div>
+                <div class="cute-box"><img src="logo/Blender.svg" alt=""><h4>Blender</h4><p class="montserrat">3D Modeling</p></div>
             </div>
         </div>
     </section>
 
+    <!-- // WORK PART -->
     <section id="work" class="container">
         <h3 class="section-label">SELECTED WORK</h3>
         <div class="work-grid">
             <div class="work-card">
                 <div class="img-container" onclick="openLightbox('KANDILI.png')"><img src="KANDILI.png"></div>
-                <div class="work-info"><h2>KANDILI</h2><p>Flood and typhoon preparedness mobile app.</p></div>
+                <div class="work-info"><h2>KANDILI</h2><p class="montserrat">Flood and typhoon preparedness mobile app.</p></div>
             </div>
             <div class="work-card">
                 <div class="img-container" onclick="openLightbox('SDU.png')"><img src="SDU.png"></div>
-                <div class="work-info"><h2>SDU-ISCMS</h2><p>Integrated Staff Capacity Management System.</p></div>
+                <div class="work-info"><h2>SDU-ISCMS</h2><p class="montserrat">Integrated Staff Capacity Management System.</p></div>
             </div>
             <div class="work-card">
                 <div class="img-container" onclick="openLightbox('BFP.png')"><img src="BFP.png"></div>
-                <div class="work-info"><h2>BFP INVENTORY</h2><p>Fire Protection supply tracking system.</p></div>
+                <div class="work-info"><h2>BFP INVENTORY</h2><p class="montserrat">Fire Protection supply tracking system.</p></div>
             </div>
             <div class="work-card">
                 <div class="img-container" onclick="openLightbox('FAST.png')"><img src="FAST.png"></div>
-                <div class="work-info"><h2>FAST</h2><p>Faculty and Student Tutors matching platform.</p></div>
+                <div class="work-info"><h2>FAST</h2><p class="montserrat">Faculty and Student Tutors matching platform.</p></div>
             </div>
         </div>
     </section>
 
+    <!-- // SAMPLE CREATIONS PART -->
     <section class="container">
         <h3 class="section-label">SAMPLE CREATIONS</h3>
         <div class="demo-grid">
@@ -124,10 +126,11 @@
             </div>
         </div>
         <div class="center-btn">
-            <a href="https://hishirusai.github.io/" class="btn-secondary">SEE MY ILLUSTRATIONS!</a>
+            <a href="https://hishirusai.github.io/" class="btn-secondary montserrat">SEE MY ILLUSTRATIONS!</a>
         </div>
     </section>
 
+    <!-- // FOOTER PART -->
     <footer>
         <div class="container">
             <div class="email-links">
@@ -135,7 +138,7 @@
                 <span class="divider">|</span>
                 <a href="mailto:Hishirusai@gmail.com">Hishirusai@gmail.com</a>
             </div>
-            <p class="copyright">&copy; 2026 SHARIFF ISIRANI (HISHIRUSAI). All Rights Reserved.</p>
+            <p class="copyright montserrat">&copy; 2026 SHARIFF ISIRANI (HISHIRUSAI). All Rights Reserved.</p>
         </div>
     </footer>
 
