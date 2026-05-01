@@ -29,6 +29,7 @@
                 <a href="mailto:2004shariffisirani@gmail.com">Email</a>
                 <a href="ISIRANI_SHARIFF_RESUME.pdf" target="_blank" class="resume-link">Resume</a>
             </div>
+            <!-- Menu Icon for Mobile on the Right -->
             <img src="ic_menu.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
         </div>
     </nav>
@@ -48,13 +49,16 @@
             <source src="videobg.mp4" type="video/mp4">
         </video>
         
+        <!-- Object-position top shows character head -->
         <img src="hero.png" alt="" class="hero-hero">
         <img src="CodeLink.png" alt="" class="hero-codelink">
         <div class="hero-shade"></div>
 
         <div class="hero-content">
+            <!-- Organized: Smaller subtitle above name -->
             <h2 class="hero-subtitle montserrat">UI/UX DESIGNER & TECHNICAL ARTIST</h2>
             
+            <!-- Organized: Desktop one-line, Mobile stack -->
             <h1 class="interactive-name">
                 SHARIFF <span class="mobile-break"></span>ISIRANI
             </h1>
@@ -64,20 +68,39 @@
         </div>
     </header>
 
-    <!-- // ABOUT ME PART -->
-    <section id="about" class="container">
-        <div class="about-grid">
+    <!-- // ABOUT ME SECTION -->
+    <section id="about">
+        <!-- Background Layer using coding-pov.png -->
+        <div class="about-bg-container">
+            <img src="coding-pov.png" alt="" class="about-bg-img">
+            <div class="about-bg-shade"></div>
+        </div>
+
+        <div class="container about-grid">
+            <!-- Left: Text Content -->
             <div class="about-text">
-                <h3 class="section-label">ABOUT ME</h3>
-                <h2 class="massive-title">SHARIFF ISIRANI</h2>
-                <p class="about-roles montserrat">Front-End Developer | UI/UX | Designer | Graphic Designer | Illustrator | Visuals</p>
+                <h3 class="section-label-big montserrat">ABOUT ME</h3>
+                <h2 class="massive-title">HI, I AM<br>SHARIFF!</h2>
                 <p class="big-bio montserrat">
-                    I am a BSIT student and Centennial Scholar focused on bridging the gap between complex system logic and intuitive user experiences. My approach combines technical rigor with the aesthetic precision of a digital artist.
+                    I am a third-year BSIT student and Centennial Scholar at Ateneo de Zamboanga University. My work is defined by the intersection of clinical system logic and high-fidelity visual storytelling.
                 </p>
-                <a href="https://hishirusai.github.io/" target="_blank" class="btn-primary montserrat">Founder of Hishirusai</a>
+                
+                <a href="https://hishirusai.github.io/" target="_blank" class="btn-founder">
+                    <div class="btn-founder-content">
+                        <span class="founder-small montserrat">FOUNDER OF</span>
+                        <span class="founder-main">HISHIRUSAI</span>
+                    </div>
+                    <img src="HISHI.png" alt="" class="btn-founder-img">
+                </a>
             </div>
-            <div class="about-image">
-                <img src="coding-pov.png" alt="Coding POV">
+
+            <!-- Right: Portrait Visual (ABOUTME.png) -->
+            <div class="about-visual">
+                <div class="portrait-container">
+                    <img src="ABOUTME.png" alt="Shariff Isirani" class="portrait-img">
+                    <div class="portrait-overlay"></div>
+                </div>
+                <p class="deploy-caption montserrat">Deploying: BFP Inventory Management System</p>
             </div>
         </div>
     </section>
@@ -111,19 +134,19 @@
         <h3 class="section-label">SELECTED WORK</h3>
         <div class="work-grid">
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('KANDILI.png')"><img src="KANDILI.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/KANDILI.png')"><img src="projects/KANDILI.png"></div>
                 <div class="work-info"><h2>KANDILI</h2><p class="montserrat">Flood and typhoon preparedness mobile app.</p></div>
             </div>
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('SDU.png')"><img src="SDU.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/SDU.png')"><img src="projects/SDU.png"></div>
                 <div class="work-info"><h2>SDU-ISCMS</h2><p class="montserrat">Integrated Staff Capacity Management System.</p></div>
             </div>
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('BFP.png')"><img src="BFP.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/BFP.png')"><img src="projects/BFP.png"></div>
                 <div class="work-info"><h2>BFP INVENTORY</h2><p class="montserrat">Fire Protection supply tracking system.</p></div>
             </div>
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('FAST.png')"><img src="FAST.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/FAST.png')"><img src="projects/FAST.png"></div>
                 <div class="work-info"><h2>FAST</h2><p class="montserrat">Faculty and Student Tutors matching platform.</p></div>
             </div>
         </div>
@@ -134,15 +157,15 @@
         <h3 class="section-label">SAMPLE CREATIONS</h3>
         <div class="demo-grid">
             <div class="demo-card">
-                <div class="img-container-small" onclick="openLightbox('CITYHEATHOFFICE.png')"><img src="CITYHEATHOFFICE.png"></div>
+                <div class="img-container-small" onclick="openLightbox('projects/CITYHEATHOFFICE.png')"><img src="projects/CITYHEATHOFFICE.png"></div>
                 <div class="demo-info"><h4>CITY HEALTH</h4></div>
             </div>
             <div class="demo-card">
-                <div class="img-container-small" onclick="openLightbox('RESTAURANT.png')"><img src="RESTAURANT.png"></div>
+                <div class="img-container-small" onclick="openLightbox('projects/RESTAURANT.png')"><img src="projects/RESTAURANT.png"></div>
                 <div class="demo-info"><h4>RESTAURANT UI</h4></div>
             </div>
             <div class="demo-card">
-                <div class="img-container-small" onclick="openLightbox('KWENTOK.png')"><img src="KWENTOK.png"></div>
+                <div class="img-container-small" onclick="openLightbox('projects/KWENTOK.png')"><img src="projects/KWENTOK.png"></div>
                 <div class="demo-info"><h4>KWENTOK APP</h4></div>
             </div>
         </div>
@@ -165,14 +188,23 @@
 
     <script>
         function openLightbox(src) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox-bg').src = src;
-            document.getElementById('lightbox').style.display = 'flex';
+            const lbImg = document.getElementById('lightbox-img');
+            const lbBg = document.getElementById('lightbox-bg');
+            const lb = document.getElementById('lightbox');
+            if(lbImg && lbBg && lb) {
+                lbImg.src = src;
+                lbBg.src = src;
+                lb.style.display = 'flex';
+            }
         }
 
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
         }
     </script>
 </body>
