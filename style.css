@@ -1,0 +1,128 @@
+/* GLOBAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --bg: #0a0a0a;
+    --card: #111111;
+    --text: #ffffff;
+    --muted: #888888;
+    --font-head: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+a { color: #ffffff !important; text-decoration: none; transition: 0.3s; }
+a:hover { opacity: 0.7; }
+
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 900; text-transform: uppercase; }
+
+.container { padding: 8rem 10%; }
+
+/* LIGHTBOX: FULL IMAGE + BLUR BACKDROP */
+.lightbox {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center;
+    overflow: hidden;
+}
+
+/* THE BLUR BACKGROUND: Fills the screen */
+.lightbox-blur-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    filter: blur(80px) brightness(0.25);
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+/* THE FRAME: Keeps it proportional */
+.lightbox-frame {
+    width: 90vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THE IMAGE: Shows ENTIRE thing, no cropping */
+.lightbox-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* CRITICAL: SHOWS FULL IMAGE */
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+/* NAV */
+nav {
+    position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between;
+    padding: 2rem 5%; z-index: 1000; background: rgba(10,10,10,0.85); backdrop-filter: blur(15px);
+}
+.logo { font-weight: 900; letter-spacing: 2px; }
+.nav-links a { margin-left: 2rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; }
+.resume-link { border: 2px solid #fff; padding: 0.6rem 1.2rem; border-radius: 2px; }
+
+/* HERO */
+.hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+.hero-video, .hero-codelink { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; }
+.hero-codelink { z-index: -2; opacity: 0.6; }
+.hero-shade { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: -1; }
+
+.hero h1 { font-size: clamp(4rem, 12vw, 9rem); letter-spacing: 10px; text-shadow: 0 10px 40px #000; }
+.hero h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); color: #fff; margin-top: 10px; }
+.slogan { font-size: 2.2rem; font-weight: 900; color: #fff; margin-top: 30px; }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 5rem; align-items: center; }
+.massive-title { font-size: clamp(3rem, 7vw, 6.5rem); line-height: 0.9; margin-bottom: 1.5rem; letter-spacing: -2px; }
+.big-bio { font-size: 2.2rem; line-height: 1.2; margin-bottom: 3rem; }
+.btn-primary { display: inline-block; background: #fff; color: #000 !important; padding: 1.5rem 3.5rem; font-weight: 900; font-size: 1.2rem; }
+.about-image img { width: 100%; height: auto; transform: scale(1.15); box-shadow: 0 50px 100px #000; }
+
+/* EXPERTISE (6x2 GRID) */
+.expertise-header { position: relative; background: url('yay.jpg') center 15% / cover; height: 380px; display: flex; align-items: center; justify-content: center; }
+.expertise-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); }
+.expertise-header h1 { position: relative; z-index: 1; font-size: 9rem; letter-spacing: 20px; text-shadow: 0 0 50px #000; }
+
+.expertise-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin-top: -4rem; position: relative; z-index: 5; }
+.cute-box { background: var(--card); border: 1px solid #222; padding: 2.5rem 1rem; text-align: center; height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.cute-box img { width: 45px; height: 45px; margin-bottom: 1rem; }
+.cute-box h4 { font-size: 0.9rem; }
+.cute-box p { font-size: 0.7rem; color: var(--muted); margin-top: 5px; }
+
+/* WORK SECTION */
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.work-card { background: var(--card); border-left: 10px solid #fff; display: flex; flex-direction: column; overflow: hidden; }
+.img-container { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; cursor: pointer; }
+.img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+.work-card:hover img { transform: scale(1.1); }
+.work-info { padding: 3rem; flex-grow: 1; }
+.work-info h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+/* SAMPLES */
+.demo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 5rem; }
+.demo-card { background: var(--card); border: 1px solid #222; overflow: hidden; text-align: center; }
+.img-container-small { width: 100%; aspect-ratio: 4 / 5; overflow: hidden; cursor: pointer; }
+.img-container-small img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+.demo-card:hover img { transform: scale(1.1); }
+.demo-info { padding: 1.5rem; }
+.center-btn { display: flex; justify-content: center; }
+.btn-secondary { border: 4px solid #fff; padding: 1.5rem 4rem; font-weight: 900; font-size: 1.3rem; }
+
+/* FOOTER */
+footer { padding: 10rem 0; text-align: center; border-top: 1px solid #222; }
+.email-links { font-size: 2.2rem; font-weight: 900; margin-bottom: 2rem; }
+.divider { margin: 0 1.5rem; color: #333; }
+.copyright { color: var(--muted); font-weight: 700; letter-spacing: 2px; }
+
+/* TABLET/MOBILE */
+@media (max-width: 1200px) {
+    .about-grid, .work-grid, .demo-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: repeat(3, 1fr); }
+    .expertise-header h1 { font-size: 5rem; letter-spacing: 5px; }
+    .massive-title { font-size: 3.5rem; }
+}

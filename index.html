@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHARIFF ISIRANI | Portfolio</title>
+    <link rel="icon" type="image/png" href="HISHI.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- LIGHTBOX: FULL IMAGE + BLURRED BACKDROP -->
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <!-- Blurred Background -->
+        <img id="lightbox-bg" class="lightbox-blur-bg" src="" alt="">
+        <!-- Full Image (No Cropping) -->
+        <div class="lightbox-frame">
+            <img id="lightbox-img" src="" alt="Large View">
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">SHARIFF ISIRANI (H)</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#work">Work</a>
+            <a href="mailto:2004shariffisirani@gmail.com">Email</a>
+            <a href="ISIRANI_SHARIFF_RESUME.pdf" target="_blank" class="resume-link">Resume</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videobg.mp4" type="video/mp4">
+        </video>
+        <img src="CodeLink.png" alt="" class="hero-codelink">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+            <h1>SHARIFF ISIRANI</h1>
+            <h2>UI/UX DESIGNER & TECHNICAL ARTIST</h2>
+            <p class="slogan">"Building Systems, Designing Worlds."</p>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h3 class="section-label">ABOUT ME</h3>
+                <h2 class="massive-title">SHARIFF ISIRANI</h2>
+                <p class="about-roles">Front-End Developer | UI/UX | Designer | Graphic Designer | Illustrator | Visuals</p>
+                <p class="big-bio">
+                    I am a BSIT student and Centennial Scholar focused on bridging the gap between complex system logic and intuitive user experiences. My approach combines technical rigor with the aesthetic precision of a digital artist.
+                </p>
+                <a href="https://hishirusai.github.io/" target="_blank" class="btn-primary">Founder of Hishirusai</a>
+            </div>
+            <div class="about-image">
+                <img src="coding-pov.png" alt="Coding POV">
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <div class="expertise-header">
+            <div class="expertise-overlay"></div>
+            <h1>EXPERTISE</h1>
+        </div>
+        <div class="container">
+            <div class="expertise-grid">
+                <div class="cute-box"><img src="visualstudiocode.svg" alt=""><h4>VS Code</h4><p>Code Editor</p></div>
+                <div class="cute-box"><img src="Figma.svg" alt=""><h4>Figma</h4><p>Interface Design</p></div>
+                <div class="cute-box"><img src="Penpot.png" alt=""><h4>Penpot</h4><p>Open Source UI</p></div>
+                <div class="cute-box"><img src="IbisPaint.svg" alt=""><h4>Ibis Paint</h4><p>Digital Art</p></div>
+                <div class="cute-box"><img src="new-affinity-logo.svg" alt=""><h4>Affinity</h4><p>Vector Art</p></div>
+                <div class="cute-box"><img src="Canva.svg" alt=""><h4>Canva</h4><p>Layouts</p></div>
+                <div class="cute-box"><img src="react.svg" alt=""><h4>React</h4><p>Frontend</p></div>
+                <div class="cute-box"><img src="tailwindcss.svg" alt=""><h4>Tailwind</h4><p>Styling</p></div>
+                <div class="cute-box"><img src="vitejs.svg" alt=""><h4>Vite</h4><p>Build Tools</p></div>
+                <div class="cute-box"><img src="github.svg" alt=""><h4>GitHub</h4><p>Version</p></div>
+                <div class="cute-box"><img src="Framer.jpg" alt=""><h4>Framer</h4><p>Prototyping</p></div>
+                <div class="cute-box"><img src="Blender.svg" alt=""><h4>Blender</h4><p>3D Modeling</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="container">
+        <h3 class="section-label">SELECTED WORK</h3>
+        <div class="work-grid">
+            <div class="work-card">
+                <div class="img-container" onclick="openLightbox('KANDILI.png')"><img src="KANDILI.png"></div>
+                <div class="work-info"><h2>KANDILI</h2><p>Flood and typhoon preparedness mobile app.</p></div>
+            </div>
+            <div class="work-card">
+                <div class="img-container" onclick="openLightbox('SDU.png')"><img src="SDU.png"></div>
+                <div class="work-info"><h2>SDU-ISCMS</h2><p>Integrated Staff Capacity Management System.</p></div>
+            </div>
+            <div class="work-card">
+                <div class="img-container" onclick="openLightbox('BFP.png')"><img src="BFP.png"></div>
+                <div class="work-info"><h2>BFP INVENTORY</h2><p>Fire Protection supply tracking system.</p></div>
+            </div>
+            <div class="work-card">
+                <div class="img-container" onclick="openLightbox('FAST.png')"><img src="FAST.png"></div>
+                <div class="work-info"><h2>FAST</h2><p>Faculty and Student Tutors matching platform.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h3 class="section-label">SAMPLE CREATIONS</h3>
+        <div class="demo-grid">
+            <div class="demo-card">
+                <div class="img-container-small" onclick="openLightbox('CITYHEATHOFFICE.png')"><img src="CITYHEATHOFFICE.png"></div>
+                <div class="demo-info"><h4>CITY HEALTH</h4></div>
+            </div>
+            <div class="demo-card">
+                <div class="img-container-small" onclick="openLightbox('RESTAURANT.png')"><img src="RESTAURANT.png"></div>
+                <div class="demo-info"><h4>RESTAURANT UI</h4></div>
+            </div>
+            <div class="demo-card">
+                <div class="img-container-small" onclick="openLightbox('KWENTOK.png')"><img src="KWENTOK.png"></div>
+                <div class="demo-info"><h4>KWENTOK APP</h4></div>
+            </div>
+        </div>
+        <div class="center-btn">
+            <a href="https://hishirusai.github.io/" class="btn-secondary">SEE MY ILLUSTRATIONS!</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="email-links">
+                <a href="mailto:2004shariffisirani@gmail.com">2004shariffisirani@gmail.com</a>
+                <span class="divider">|</span>
+                <a href="mailto:Hishirusai@gmail.com">Hishirusai@gmail.com</a>
+            </div>
+            <p class="copyright">&copy; 2026 SHARIFF ISIRANI (HISHIRUSAI). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-bg').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
