@@ -6,6 +6,9 @@
     <title>SHARIFF ISIRANI | Portfolio</title>
     <link rel="icon" type="image/png" href="HISHI.png">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload the hero image so it downloads immediately -->
+    <link rel="preload" as="image" href="yay.jpg">
 </head>
 <body>
 
@@ -47,7 +50,7 @@
     <header class="hero">
         
         <!-- Object-position top shows character head -->
-        <img src="newhero.png" alt="" class="hero-hero">
+        <img src="yay.jpg" alt="Shariff Hero Background" class="hero-hero" fetchpriority="high">
         <img src="CodeLink.png" alt="" class="hero-codelink">
         <div class="hero-shade"></div>
 
@@ -69,7 +72,7 @@
     <section id="about">
         <!-- Background Layer using coding-pov.png -->
         <div class="about-bg-container">
-            <img src="coding-pov.png" alt="" class="about-bg-img">
+            <img src="coding-pov.png" alt="" class="about-bg-img" loading="lazy">
             <div class="about-bg-shade"></div>
         </div>
 
@@ -87,14 +90,14 @@
                         <span class="founder-small montserrat">FOUNDER OF</span>
                         <span class="founder-main">HISHIRUSAI</span>
                     </div>
-                    <img src="HISHI.png" alt="" class="btn-founder-img">
+                    <img src="HISHI.png" alt="" class="btn-founder-img" loading="lazy">
                 </a>
             </div>
 
             <!-- Right: Portrait Visual (ABOUTME.png) -->
             <div class="about-visual">
                 <div class="portrait-container">
-                    <img src="ABOUTME.png" alt="Shariff Isirani" class="portrait-img">
+                    <img src="ABOUTME.png" alt="Shariff Isirani" class="portrait-img" loading="lazy">
                     <div class="portrait-overlay"></div>
                 </div>
                 <p class="deploy-caption montserrat">Deploying: BFP Inventory Management System</p>
@@ -131,19 +134,19 @@
         <h3 class="section-label">SELECTED WORK</h3>
         <div class="work-grid">
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/KANDILI.png')"><img src="projects/KANDILI.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/KANDILI.png')"><img src="projects/KANDILI.png" loading="lazy"></div>
                 <div class="work-info"><h2>KANDILI</h2><p class="montserrat">Flood and typhoon preparedness mobile app.</p></div>
             </div>
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/SDU.png')"><img src="projects/SDU.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/SDU.png')"><img src="projects/SDU.png" loading="lazy"></div>
                 <div class="work-info"><h2>SDU-ISCMS</h2><p class="montserrat">Integrated Staff Capacity Management System.</p></div>
             </div>
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/BFP.png')"><img src="projects/BFP.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/BFP.png')"><img src="projects/BFP.png" loading="lazy"></div>
                 <div class="work-info"><h2>BFP INVENTORY</h2><p class="montserrat">Fire Protection supply tracking system.</p></div>
             </div>
             <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/FAST.png')"><img src="projects/FAST.png"></div>
+                <div class="img-container" onclick="openLightbox('projects/FAST.png')"><img src="projects/FAST.png" loading="lazy"></div>
                 <div class="work-info"><h2>FAST</h2><p class="montserrat">Faculty and Student Tutors matching platform.</p></div>
             </div>
         </div>
