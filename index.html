@@ -6,10 +6,14 @@
     <title>SHARIFF ISIRANI | Portfolio</title>
     <link rel="icon" type="image/png" href="HISHI.png">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Preload the hero image so it downloads immediately -->
     <link rel="preload" as="image" href="yay.jpg">
 </head>
+<!-- Background Music -->
+<audio id="bg-music" src="mixkit-game-level-music-689.wav" loop></audio>
+
+<!-- Music Toggle Button -->
+<button id="music-btn" onclick="toggleMusic()" title="Toggle Music">♪</button>
+
 <body>
 
     <!-- // LIGHTBOX PART -->
@@ -22,17 +26,19 @@
 
     <!-- // NAVIGATION PART -->
     <nav>
-        <div class="logo-text">SHARIFF ISIRANI (H)</div>
-        
+        <div class="nav-brand">
+            <img src="TRANSPARENT SI LOGO.png" alt="SI Logo" class="nav-logo">
+            <div class="logo-text">SHARIFF ISIRANI <span class="logo-divider">|</span> SI MEDIA</div>
+        </div>
         <div class="nav-right">
             <div class="nav-links desktop-nav">
                 <a href="#about">About</a>
                 <a href="#expertise">Expertise</a>
-                <a href="#work">Work</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="journal.html">Journal</a>
                 <a href="mailto:2004shariffisirani@gmail.com">Email</a>
                 <a href="ISIRANI_SHARIFF_RESUME.pdf" target="_blank" class="resume-link">Resume</a>
             </div>
-            <!-- Menu Icon for Mobile on the Right -->
             <img src="ic_menu.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
         </div>
     </nav>
@@ -41,52 +47,44 @@
     <div id="mobile-menu" class="mobile-menu-overlay">
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#expertise" onclick="toggleMenu()">Expertise</a>
-        <a href="#work" onclick="toggleMenu()">Work</a>
+        <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+        <a href="journal.html" onclick="toggleMenu()">Journal</a>
         <a href="mailto:2004shariffisirani@gmail.com" onclick="toggleMenu()">Email</a>
         <a href="ISIRANI_SHARIFF_RESUME.pdf" target="_blank" class="resume-link-mobile">Resume</a>
     </div>
 
     <!-- // HEADER PART -->
     <header class="hero">
-        
-        <!-- Object-position top shows character head -->
         <img src="yay.jpg" alt="Shariff Hero Background" class="hero-hero" fetchpriority="high">
         <img src="CodeLink.png" alt="" class="hero-codelink">
         <div class="hero-shade"></div>
-
         <div class="hero-content">
-            <!-- Updated subtitle to include FRONTEND DEV -->
-            <h2 class="hero-subtitle montserrat">UI/UX DESIGNER | FRONTEND DEV & TECHNICAL ARTIST</h2>
-            
-            <!-- Organized: Desktop one-line, Mobile stack -->
-            <h1 class="interactive-name">
-                SHARIFF <span class="mobile-break"></span>ISIRANI
-            </h1>
-            
-            <p class="slogan montserrat">"Building Systems, Designing Worlds."</p>
+            <h2 class="hero-subtitle">
+                UI/UX DESIGNER <span class="hero-dot">•</span>
+                FRONTEND DEV <span class="hero-dot">•</span>
+                VIDEO EDITOR <span class="hero-dot">•</span>
+                GRAPHIC DESIGNER
+            </h2>
+            <p class="hero-brand-tag">SI MEDIA</p>
+            <h1 class="hero-name">SHARIFF ISIRANI</h1>
+            <p class="slogan">"Building Systems, Designing Worlds."</p>
         </div>
     </header>
 
     <!-- // ABOUT ME SECTION -->
     <section id="about">
-        <!-- Background Layer using coding-pov.png -->
         <div class="about-bg-container">
             <img src="coding-pov.png" alt="" class="about-bg-img" loading="lazy">
             <div class="about-bg-shade"></div>
         </div>
-
         <div class="container about-grid">
-            <!-- Left: Text Content -->
             <div class="about-text">
                 <h3 class="section-label-big montserrat">ABOUT ME</h3>
                 <h2 class="massive-title">HI, I AM<br>SHARIFF!</h2>
                 <p class="big-bio montserrat">
                     I am a third-year BSIT student and Centennial Scholar at Ateneo de Zamboanga University. My work is defined by the intersection of clinical system logic and high-fidelity visual storytelling.
                 </p>
-                
             </div>
-
-            <!-- Right: Portrait Visual (ABOUTME.png) -->
             <div class="about-visual">
                 <div class="portrait-container">
                     <img src="ABOUTME.png" alt="Shariff Isirani" class="portrait-img" loading="lazy">
@@ -121,47 +119,84 @@
         </div>
     </section>
 
-    <!-- // WORK PART -->
-    <section id="work" class="container">
-        <h3 class="section-label">SELECTED WORK</h3>
-        <div class="work-grid">
-            <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/KANDILI.png')"><img src="projects/KANDILI.png" loading="lazy"></div>
-                <div class="work-info"><h2>KANDILI</h2><p class="montserrat">Flood and typhoon preparedness mobile app.</p></div>
-            </div>
-            <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/SDU.png')"><img src="projects/SDU.png" loading="lazy"></div>
-                <div class="work-info"><h2>SDU-ISCMS</h2><p class="montserrat">Integrated Staff Capacity Management System.</p></div>
-            </div>
-            <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/BFP.png')"><img src="projects/BFP.png" loading="lazy"></div>
-                <div class="work-info"><h2>BFP INVENTORY</h2><p class="montserrat">Fire Protection supply tracking system.</p></div>
-            </div>
-            <div class="work-card">
-                <div class="img-container" onclick="openLightbox('projects/FAST.png')"><img src="projects/FAST.png" loading="lazy"></div>
-                <div class="work-info"><h2>FAST</h2><p class="montserrat">Faculty and Student Tutors matching platform.</p></div>
-            </div>
-        </div>
-    </section>
+    <!-- ============================================================ -->
+    <!-- // PORTFOLIO SECTION — UNIFIED INTERACTIVE CATEGORY EXPLORER -->
+    <!-- ============================================================ -->
+    <section id="portfolio" class="pf-section">
 
-    <!-- // SAMPLE CREATIONS PART -->
-    <section class="container">
-        <h3 class="section-label">SAMPLE CREATIONS</h3>
-        <div class="demo-grid">
-            <div class="demo-card">
-                <div class="img-container-small" onclick="openLightbox('projects/CITYHEATHOFFICE.png')"><img src="projects/CITYHEATHOFFICE.png"></div>
-                <div class="demo-info"><h4>CITY HEALTH</h4></div>
-            </div>
-            <div class="demo-card">
-                <div class="img-container-small" onclick="openLightbox('projects/RESTAURANT.png')"><img src="projects/RESTAURANT.png"></div>
-                <div class="demo-info"><h4>RESTAURANT UI</h4></div>
-            </div>
-            <div class="demo-card">
-                <div class="img-container-small" onclick="openLightbox('projects/KWENTOK.png')"><img src="projects/KWENTOK.png"></div>
-                <div class="demo-info"><h4>KWENTOK APP</h4></div>
-            </div>
+        <div class="pf-header container">
+            <h3 class="section-label montserrat">MY WORK</h3>
+            <h2 class="pf-title">PORTFOLIO</h2>
         </div>
+
+        <!-- CATEGORY TRIGGER CARDS -->
+        <div class="pf-trigger-row container">
+
+            <div class="pf-trigger-card" id="trigger-frontend" onclick="openPortfolioPanel('frontend')">
+                <div class="pf-trigger-bg" style="background-image: url('projects/SDU.png');"></div>
+                <div class="pf-trigger-shade"></div>
+                <div class="pf-trigger-content">
+                    <span class="pf-trigger-index montserrat">01</span>
+                    <h2 class="pf-trigger-title">FRONTEND<br>& UI/UX</h2>
+                    <p class="pf-trigger-sub montserrat">Systems · Interfaces · Web Apps</p>
+                    <span class="pf-trigger-cta montserrat">VIEW PROJECTS ↓</span>
+                </div>
+            </div>
+
+            <div class="pf-trigger-card" id="trigger-graphics" onclick="openPortfolioPanel('graphics')">
+                <div class="pf-trigger-bg" style="background-image: url('projects/CITYHEATHOFFICE.png');"></div>
+                <div class="pf-trigger-shade"></div>
+                <div class="pf-trigger-content">
+                    <span class="pf-trigger-index montserrat">02</span>
+                    <h2 class="pf-trigger-title">GRAPHIC<br>DESIGNS</h2>
+                    <p class="pf-trigger-sub montserrat">Banners · Logos · Brand Art</p>
+                    <span class="pf-trigger-cta montserrat">VIEW PROJECTS ↓</span>
+                </div>
+            </div>
+
+            <div class="pf-trigger-card" id="trigger-samples" onclick="openPortfolioPanel('samples')">
+                <div class="pf-trigger-bg" style="background-image: url('projects/RESTAURANT.png');"></div>
+                <div class="pf-trigger-shade"></div>
+                <div class="pf-trigger-content">
+                    <span class="pf-trigger-index montserrat">03</span>
+                    <h2 class="pf-trigger-title">SAMPLE<br>CREATIONS</h2>
+                    <p class="pf-trigger-sub montserrat">UI Samples · Concepts · Experiments</p>
+                    <span class="pf-trigger-cta montserrat">VIEW PROJECTS ↓</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- EXPANDABLE PANEL (shared, swaps content) -->
+        <div class="pf-panel" id="pf-panel">
+
+            <!-- Panel Header -->
+            <div class="pf-panel-header container">
+                <div class="pf-panel-meta">
+                    <span class="pf-panel-label montserrat" id="pf-panel-label">FRONTEND & UI/UX</span>
+                    <p class="pf-panel-desc montserrat" id="pf-panel-desc">Selected interface and web application projects.</p>
+                </div>
+                <button class="pf-close-btn montserrat" onclick="closePortfolioPanel()">[ ESC_CLOSE_SECTION ]</button>
+            </div>
+
+            <!-- Sub-filter Nav -->
+            <div class="pf-filter-nav container" id="pf-filter-nav">
+                <!-- injected by JS -->
+            </div>
+
+            <!-- Project Grid -->
+            <div class="pf-grid-outer container">
+                <div class="pf-grid" id="pf-carousel-track">
+                    <!-- injected by JS -->
+                </div>
+            </div>
+
+        </div>
+
     </section>
+    <!-- ============================================================ -->
+    <!-- END PORTFOLIO SECTION                                        -->
+    <!-- ============================================================ -->
 
     <!-- // FOOTER PART -->
     <footer>
@@ -174,25 +209,200 @@
     </footer>
 
     <script>
+        /* ─── LIGHTBOX ─── */
         function openLightbox(src) {
             const lbImg = document.getElementById('lightbox-img');
-            const lbBg = document.getElementById('lightbox-bg');
-            const lb = document.getElementById('lightbox');
-            if(lbImg && lbBg && lb) {
+            const lbBg  = document.getElementById('lightbox-bg');
+            const lb    = document.getElementById('lightbox');
+            if (lbImg && lbBg && lb) {
                 lbImg.src = src;
-                lbBg.src = src;
+                lbBg.src  = src;
                 lb.style.display = 'flex';
             }
         }
 
+        /* ─── MOBILE MENU ─── */
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'flex';
-            }
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
         }
+
+        /* ════════════════════════════════════════════════════
+           PORTFOLIO SECTION — DATA & LOGIC
+        ════════════════════════════════════════════════════ */
+
+        const portfolioData = {
+            frontend: {
+                label:  'FRONTEND & UI/UX',
+                desc:   'Selected interface and web application projects.',
+                filters: ['ALL', 'MOBILE APP', 'WEB SYSTEM', 'DASHBOARD', 'PROTOTYPE'],
+                projects: [
+                    { title: 'KANDILI',      tag: 'MOBILE APP',  img: 'projects/KANDILI.png',          desc: 'Flood & typhoon preparedness app.' },
+                    { title: 'SDU-ISCMS',    tag: 'WEB SYSTEM',  img: 'projects/SDU.png',              desc: 'Staff Capacity Management System.' },
+                    { title: 'BFP INVENTORY',tag: 'WEB SYSTEM',  img: 'projects/BFP.png',              desc: 'Fire Protection supply tracker.' },
+                    { title: 'FAST',         tag: 'PROTOTYPE',   img: 'projects/FAST.png',             desc: 'Faculty & Student Tutors platform.' },
+                    { title: 'CITY HEALTH',  tag: 'DASHBOARD',   img: 'projects/CITYHEATHOFFICE.png',  desc: 'City Health Office UI design.' },
+                    { title: 'RESTAURANT UI',tag: 'PROTOTYPE',   img: 'projects/RESTAURANT.png',       desc: 'Restaurant ordering interface.' },
+                    { title: 'KWENTOK',      tag: 'MOBILE APP',  img: 'projects/KWENTOK.png',          desc: 'Social storytelling app.' },
+                ]
+            },
+            graphics: {
+                label:  'GRAPHIC DESIGNS',
+                desc:   'Brand identity, banners, and visual design work.',
+                filters: ['ALL', 'GAMING BANNER', 'LOGO', 'BRAND ART', 'SOCIAL MEDIA'],
+                projects: [
+                    { title: 'SI MEDIA LOGO',    tag: 'LOGO',          img: 'projects/CITYHEATHOFFICE.png', desc: 'Brand identity for SI Media Studios.' },
+                    { title: 'PGR BANNER',        tag: 'GAMING BANNER', img: 'projects/KANDILI.png',         desc: 'Punishing Gray Raven fan banner.' },
+                    { title: 'HISHI BRAND',       tag: 'BRAND ART',     img: 'projects/KWENTOK.png',         desc: 'Personal illustrator branding.' },
+                    { title: 'EVENT PROMO',       tag: 'SOCIAL MEDIA',  img: 'projects/RESTAURANT.png',      desc: 'University event graphics.' },
+                    { title: 'ADZU ADMISSIONS',   tag: 'LOGO',          img: 'projects/SDU.png',             desc: 'Official logo redesign project.' },
+                    { title: 'GUILD BANNER',      tag: 'GAMING BANNER', img: 'projects/BFP.png',             desc: 'Guild promo art for online game.' },
+                    { title: 'ZUKIYA VSL ART',    tag: 'BRAND ART',     img: 'projects/FAST.png',            desc: 'Channel art for Zukiya VSL.' },
+                ]
+            },
+            samples: {
+                label:  'SAMPLE CREATIONS',
+                desc:   'UI experiments, concept interfaces, and quick creations.',
+                filters: ['ALL', 'UI SAMPLE', 'CONCEPT', 'EXPERIMENT'],
+                projects: [
+                    { title: 'CITY HEALTH',   tag: 'UI SAMPLE',  img: 'projects/CITYHEATHOFFICE.png', desc: 'City Health Office UI design.' },
+                    { title: 'RESTAURANT UI', tag: 'UI SAMPLE',  img: 'projects/RESTAURANT.png',      desc: 'Restaurant ordering interface.' },
+                    { title: 'KWENTOK APP',   tag: 'CONCEPT',    img: 'projects/KWENTOK.png',         desc: 'Social storytelling app concept.' },
+                ]
+            }
+        };
+
+        /* State */
+        let activeCategory = null;
+        let activeFilter   = 'ALL';
+
+        /* ── Open Panel ── */
+        function openPortfolioPanel(category) {
+            const data  = portfolioData[category];
+            const panel = document.getElementById('pf-panel');
+
+            /* If same card clicked while open → close */
+            if (activeCategory === category && panel.classList.contains('pf-panel--open')) {
+                closePortfolioPanel();
+                return;
+            }
+
+            activeCategory = category;
+            activeFilter   = 'ALL';
+
+            /* Update trigger card active states */
+            document.querySelectorAll('.pf-trigger-card').forEach(c => c.classList.remove('pf-trigger-card--active'));
+            document.getElementById('trigger-' + category).classList.add('pf-trigger-card--active');
+
+            /* Inject header meta */
+            document.getElementById('pf-panel-label').textContent = data.label;
+            document.getElementById('pf-panel-desc').textContent  = data.desc;
+
+            /* Build filter nav */
+            buildFilterNav(data.filters);
+
+            /* Build carousel */
+            buildCarousel(data.projects, 'ALL');
+
+            /* Open */
+            panel.classList.add('pf-panel--open');
+
+            /* Scroll into view after transition starts */
+            setTimeout(() => {
+                panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 80);
+        }
+
+        /* ── Close Panel ── */
+        function closePortfolioPanel() {
+            const panel = document.getElementById('pf-panel');
+            panel.classList.remove('pf-panel--open');
+            document.querySelectorAll('.pf-trigger-card').forEach(c => c.classList.remove('pf-trigger-card--active'));
+            activeCategory = null;
+        }
+
+        /* ── Build Filter Nav ── */
+        function buildFilterNav(filters) {
+            const nav = document.getElementById('pf-filter-nav');
+            nav.innerHTML = filters.map(f =>
+                `<button class="pf-filter-btn montserrat ${f === 'ALL' ? 'pf-filter-btn--active' : ''}"
+                         onclick="applyFilter('${f}')">${f}</button>`
+            ).join('');
+        }
+
+        /* ── Apply Filter ── */
+        function applyFilter(filter) {
+            activeFilter = filter;
+            document.querySelectorAll('.pf-filter-btn').forEach(b => {
+                b.classList.toggle('pf-filter-btn--active', b.textContent === filter);
+            });
+            const data = portfolioData[activeCategory];
+            buildCarousel(data.projects, filter);
+        }
+
+        /* ── Build Carousel ── */
+        function buildCarousel(projects, filter) {
+            const filtered = filter === 'ALL' ? projects : projects.filter(p => p.tag === filter);
+            const grid     = document.getElementById('pf-carousel-track');
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="pf-empty montserrat">NO PROJECTS IN THIS CATEGORY YET.</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map((p, i) => `
+                <div class="pf-grid-card" style="animation-delay:${(i % 4) * 0.45}s" onclick="openLightbox('${p.img}')">
+                    <div class="pf-card-img-wrap">
+                        <img src="${p.img}" alt="${p.title}" loading="lazy">
+                        <div class="pf-card-overlay">
+                            <span class="pf-card-tag montserrat">${p.tag}</span>
+                        </div>
+                    </div>
+                    <div class="pf-card-info">
+                        <h4>${p.title}</h4>
+                        <p class="montserrat">${p.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            /* 3D hover: enlarge focused card, blur + dim all others */
+            grid.addEventListener('mouseover', e => {
+                const hovered = e.target.closest('.pf-grid-card');
+                if (!hovered) return;
+                grid.querySelectorAll('.pf-grid-card').forEach(card => {
+                    card.classList.toggle('pf-card--focus',  card === hovered);
+                    card.classList.toggle('pf-card--dimmed', card !== hovered);
+                });
+            });
+            grid.addEventListener('mouseleave', () => {
+                grid.querySelectorAll('.pf-grid-card').forEach(card => {
+                    card.classList.remove('pf-card--focus', 'pf-card--dimmed');
+                });
+            });
+        }
+
+        /* ESC key to close panel */
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closePortfolioPanel();
+        });
+
+        /* ─── MUSIC TOGGLE ─── */
+        const music = document.getElementById('bg-music');
+        const btn   = document.getElementById('music-btn');
+        let playing = false;
+
+        function toggleMusic() {
+        if (playing) {
+        music.pause();
+        btn.textContent = '♪';
+        btn.classList.remove('music-on');
+        } else {
+        music.play();
+        btn.textContent = '♫';
+        btn.classList.add('music-on');
+        }
+        playing = !playing;
+}
     </script>
 </body>
 </html>
